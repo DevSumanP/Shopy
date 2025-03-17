@@ -17,7 +17,7 @@ env:
 jobs:
   # Job 1: Build and Test
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: window-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -61,7 +61,7 @@ jobs:
 
   # Job 2: Deploy to Development (Firebase App Distribution)
   deploy-dev:
-    runs-on: ubuntu-latest
+    runs-on: window-latest
     needs: build-and-test
     if: github.ref == 'refs/heads/dev'  # Fixed branch name to 'dev' (was 'develop')
     steps:
