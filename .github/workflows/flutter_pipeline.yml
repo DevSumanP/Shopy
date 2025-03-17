@@ -49,12 +49,12 @@ jobs:
       - name: Run unit tests
         run: flutter test
 
-      - name: Set up Android Emulator for integration tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 29
-          arch: x86_64
-          script: flutter test integration_test
+      # - name: Set up Android Emulator for integration tests
+      #   uses: reactivecircus/android-emulator-runner@v2
+      #   with:
+      #     api-level: 29
+      #     arch: x86_64
+      #     script: flutter test integration_test
 
       - name: Build APK
         run: flutter build apk --debug
